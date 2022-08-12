@@ -36,4 +36,9 @@ class ChatEvent implements ShouldBroadcast
     {
         return new Channel('channel-chat');
     }
+
+    public function broadcastAs()
+    {
+        return 'channel-chat';
+    }
 }

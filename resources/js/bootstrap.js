@@ -36,6 +36,10 @@ window.Echo = new Echo({
 });
 
 //tampilkan di console.log
-window.Echo.channel('channel-chat').listen('ChatEvent', (event) => {
-    console.log('berhasil listen');
-})
+// var channel = Echo.channel('my-channel');
+// channel.listen('.my-event', function(data) {
+//   alert(JSON.stringify(data));
+// });
+// window.Echo.channel('channel-chat').listen('ChatEvent', (event) => {
+//     console.log('berhasil listen');
+// })

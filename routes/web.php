@@ -2,6 +2,8 @@
 
 use App\Events\ChatEvent;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\NameController;
+use App\Http\Controllers\ViewController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Route;
@@ -17,10 +19,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/pusher', function () {
-    ChatEvent::dispatch('Belajar pusher');
-});
+Route::get('/', [ViewController::class, 'index']);
+Route::get('view', [ViewController::class, 'view']);
+Route::resource('data', NameController::class);
