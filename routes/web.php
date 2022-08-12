@@ -20,5 +20,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ViewController::class, 'index']);
-Route::get('view', [ViewController::class, 'view']);
 Route::resource('data', NameController::class);
